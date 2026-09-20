@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_primary">#006D77</color>
+    <color name="bg_light">#F8F9FA</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#666666</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="drawer_bg">#005B66</color>
+
+    <color name="pink_accent">#E21B63</color>
+    <color name="off_black">#1A1A1A</color>
+    <color name="grey_text">#999999</color>
+    <color name="light_grey">#E3E3E3</color>
+</resources>

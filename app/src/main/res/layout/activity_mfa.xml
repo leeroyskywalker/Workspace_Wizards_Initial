@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Header Section -->
+    <View
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/teal_primary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Two-Factor Verification"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Enter the 6-digit passcode sent to your email address."
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp" />
+
+    <!-- OTP Input Section -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etOtpDigit1"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/input_box_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtpDigit2"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/input_box_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtpDigit3"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/input_box_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtpDigit4"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/input_box_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtpDigit5"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/input_box_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etOtpDigit6"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/input_box_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Action Controls -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVerifyOtp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:text="Verify Account"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/teal_primary"
+        app:cornerRadius="8dp" />
+
+    <TextView
+        android:id="@+id/tvResendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Didn't receive a code? Resend Code"
+        android:textColor="@color/teal_primary"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Next Preview Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNextPreview"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="32dp"
+        android:text="→"
+        android:textColor="@color/teal_primary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

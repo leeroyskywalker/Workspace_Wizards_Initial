@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WorkspaceWizards">
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".MfaActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen04Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen05Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen06Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen07Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen08Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen09Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen10Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen11Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen12Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen13Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen14Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen15Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen16Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Screen17Activity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

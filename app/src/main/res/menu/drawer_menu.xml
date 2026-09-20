@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_contacts_drawer"
+        android:icon="@drawable/ic_contacts"
+        android:title="Contacts" />
+    <item
+        android:id="@+id/nav_companies"
+        android:icon="@drawable/ic_business"
+        android:title="Companies" />
+    <item
+        android:id="@+id/nav_quotes"
+        android:icon="@drawable/ic_estimate"
+        android:title="Quotes &amp; Estimates" />
+    <item
+        android:id="@+id/nav_invoices"
+        android:icon="@drawable/ic_receipt"
+        android:title="Invoices &amp; Billing" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+</menu>
