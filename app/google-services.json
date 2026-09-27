@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "276903866065",
+    "project_id": "wwtest-afe87",
+    "storage_bucket": "wwtest-afe87.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276903866065:android:3cfc82d1439394b9b71ff0",
+        "android_client_info": {
+          "package_name": "com.example.workspacewizardsg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTU1HbdcOiq4zJv8DClj1HTv5ugnPjh2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276903866065:android:5461fe3ba7840d2eb71ff0",
+        "android_client_info": {
+          "package_name": "com.workspacewizards.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTU1HbdcOiq4zJv8DClj1HTv5ugnPjh2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

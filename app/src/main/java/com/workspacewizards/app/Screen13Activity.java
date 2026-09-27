@@ -3,6 +3,7 @@ package com.workspacewizards.app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Screen13Activity extends AppCompatActivity {
@@ -11,7 +12,13 @@ public class Screen13Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen13);
 
+        ImageButton btnBack = findViewById(R.id.btnBack);
         Button btnNextPreview = findViewById(R.id.btnNextPreview);
+
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> finish());
+        }
+
         btnNextPreview.setOnClickListener(v -> {
             Intent intent = new Intent(Screen13Activity.this, Screen14Activity.class);
             startActivity(intent);

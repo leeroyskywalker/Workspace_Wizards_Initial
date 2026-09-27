@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Job Complete"
+            android:text="@string/screen10_header_title"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -37,6 +37,7 @@
             android:id="@+id/ivSuccessCheck"
             android:layout_width="96dp"
             android:layout_height="96dp"
+            android:contentDescription="@string/cd_success_icon"
             android:src="@android:drawable/checkbox_on_background"
             app:tint="@color/teal_primary" />
 
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:gravity="center"
-            android:text="Work Order Completed!"
+            android:text="@string/screen10_headline"
             android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -57,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="The job status has been updated and the invoice is ready for download."
+            android:text="@string/screen10_message"
             android:textColor="@color/text_secondary"
             android:textSize="14sp" />
 
@@ -66,7 +67,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text=""
             android:textColor="@color/teal_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -84,7 +84,7 @@
             android:id="@+id/btnReturnHome"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Return to Dashboard"
+            android:text="@string/screen10_btn_return_home"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="16sp"
@@ -98,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="12dp"
-            android:text="View All Jobs"
+            android:text="@string/screen10_btn_view_jobs"
             android:textAllCaps="false"
             android:textColor="@color/teal_primary"
             app:cornerRadius="8dp"
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="32dp"
-            android:text="→"
+            android:text="@string/next_preview_arrow"
             android:textColor="@color/teal_primary"
             android:textSize="24sp"
             android:textStyle="bold" />

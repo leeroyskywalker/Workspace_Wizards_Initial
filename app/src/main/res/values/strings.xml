@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Workspace Wizards</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_success_icon">Success Checkmark</string>
+    <string name="next_preview_arrow">→</string>
+
+    <!-- Screen 09: Sandbox Payment -->
+    <string name="screen09_header_title">PayFast Payment Gateway</string>
+    <string name="screen09_amount_due_label">Amount Due</string>
+    <string name="screen09_default_amount">R 2,450.00</string>
+    <string name="screen09_btn_pay_payfast">Pay with PayFast</string>
+    <string name="screen09_payfast_cancel_toast">Payment cancelled</string>
+    <string name="screen09_payfast_success_toast">PayFast Payment Completed Successfully</string>
+
+    <!-- Screen 10: Completion -->
+    <string name="screen10_header_title">Job Complete</string>
+    <string name="screen10_headline">Work Order Completed!</string>
+    <string name="screen10_message">The job status has been updated and the invoice is ready for download.</string>
+    <string name="screen10_order_ref_format">Order Reference: %1$s</string>
+    <string name="screen10_btn_return_home">Return to Dashboard</string>
+    <string name="screen10_btn_view_jobs">View All Jobs</string>
 </resources>

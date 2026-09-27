@@ -75,8 +75,8 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All"
-                android:checked="true" />
+                android:checked="true"
+                android:text="All" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipUnpaid"
@@ -95,7 +95,8 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:layout_marginTop="16dp">
 
             <androidx.recyclerview.widget.RecyclerView
@@ -103,14 +104,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <TextView
-                android:id="@+id/tvEmptyClientsState"
+            <!-- Centered Empty State Container -->
+            <LinearLayout
+                android:id="@+id/layoutEmptyState"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="No clients found. Tap '+' to add a client."
-                android:textColor="@color/text_secondary"
-                android:textSize="14sp" />
+                android:orientation="vertical"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_business"
+                    app:tint="@color/grey_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="No clients found"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Tap '+ Add New Client' to create one."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+            </LinearLayout>
         </FrameLayout>
 
         <!-- Next Preview Button -->
@@ -120,7 +149,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text="→"
             android:textColor="@color/teal_primary"
             android:textSize="24sp"
