@@ -1,6 +1,5 @@
 package com.workspacewizards.app;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -12,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Screen04Activity extends AppCompatActivity {
 
     private ImageButton btnBack;
-    private Button btnNextPreview;
     private Button btnDispatchJob;
     private AutoCompleteTextView actvClientSelect, actvServiceType, actvAssignCrew;
     private EditText etJobTitle, etJobNotes, etScheduledDate;
@@ -24,7 +22,6 @@ public class Screen04Activity extends AppCompatActivity {
 
         // Binding views
         btnBack = findViewById(R.id.btnBack);
-        btnNextPreview = findViewById(R.id.btnNextPreview);
         btnDispatchJob = findViewById(R.id.btnDispatchJob);
         
         actvClientSelect = findViewById(R.id.actvClientSelect);
@@ -35,25 +32,24 @@ public class Screen04Activity extends AppCompatActivity {
         etJobNotes = findViewById(R.id.etJobNotes);
         etScheduledDate = findViewById(R.id.etScheduledDate);
 
-        // Back button finish activity
-        btnBack.setOnClickListener(v -> finish());
-
-        // Next preview launches Screen 05
-        btnNextPreview.setOnClickListener(v -> {
-            Intent intent = new Intent(Screen04Activity.this, Screen05Activity.class);
-            startActivity(intent);
-        });
+        // Back button triggers standard back navigation
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
+        }
 
         // Dispatch button logic
-        btnDispatchJob.setOnClickListener(v -> {
-            if (validateForm()) {
-                Toast.makeText(this, "Work Order Created", Toast.LENGTH_SHORT).show();
-            }
-        });
+        if (btnDispatchJob != null) {
+            btnDispatchJob.setOnClickListener(v -> {
+                if (validateForm()) {
+                    Toast.makeText(this, "Work Order Created", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            });
+        }
     }
 
     private boolean validateForm() {
-        if (etJobTitle.getText().toString().trim().isEmpty()) {
+        if (etJobTitle != null && etJobTitle.getText().toString().trim().isEmpty()) {
             etJobTitle.setError("Required");
             return false;
         }

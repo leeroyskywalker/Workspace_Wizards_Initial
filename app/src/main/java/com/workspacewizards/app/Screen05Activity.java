@@ -1,9 +1,9 @@
 package com.workspacewizards.app;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Screen05Activity extends AppCompatActivity {
@@ -14,13 +14,17 @@ public class Screen05Activity extends AppCompatActivity {
         setContentView(R.layout.activity_screen05);
 
         ImageButton btnBack = findViewById(R.id.btnBack);
-        Button btnNextPreview = findViewById(R.id.btnNextPreview);
+        Button btnCreateJob = findViewById(R.id.btnCreateJob);
 
-        btnBack.setOnClickListener(v -> finish());
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
+        }
 
-        btnNextPreview.setOnClickListener(v -> {
-            Intent intent = new Intent(Screen05Activity.this, Screen06Activity.class);
-            startActivity(intent);
-        });
+        if (btnCreateJob != null) {
+            btnCreateJob.setOnClickListener(v -> {
+                Toast.makeText(this, "Job Created & Dispatched", Toast.LENGTH_SHORT).show();
+                finish();
+            });
+        }
     }
 }

@@ -142,21 +142,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
 
-        <!-- Next Preview Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnNextPreview"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            android:text="→"
-            android:textColor="@color/teal_primary"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

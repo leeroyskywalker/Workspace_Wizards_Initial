@@ -19,4 +19,41 @@
     <string name="screen10_order_ref_format">Order Reference: %1$s</string>
     <string name="screen10_btn_return_home">Return to Dashboard</string>
     <string name="screen10_btn_view_jobs">View All Jobs</string>
+
+    <!-- Invoice Module -->
+    <string name="invoice_title">Invoice Generator</string>
+    <string name="invoice_number_label">Invoice Number</string>
+    <string name="issue_date_label">Issue Date</string>
+    <string name="due_date_label">Due Date</string>
+    <string name="billed_to_section">BILLED TO</string>
+    <string name="payable_to_section">PAYABLE TO</string>
+    <string name="line_items_section">Line Items</string>
+    <string name="add_line_item">+ Add Line Item</string>
+    <string name="subtotal_label">Subtotal</string>
+    <string name="tax_vat_label">Tax / VAT (%)</string>
+    <string name="total_due_label">Total Due</string>
+    <string name="payment_details_section">PAYMENT DETAILS</string>
+    <string name="export_pdf_btn">Export / Download PDF</string>
+    <string name="share_pdf_btn">Share PDF</string>
+    <string name="save_invoice_btn">Save Invoice</string>
+    <string name="client_name_hint">Client Name</string>
+    <string name="contact_name_hint">Contact Name</string>
+    <string name="email_hint">Email Address</string>
+    <string name="address_hint">Address</string>
+    <string name="company_name_hint">Company Name</string>
+    <string name="bank_name_hint">Bank Name</string>
+    <string name="account_name_hint">Account Name</string>
+    <string name="account_number_hint">Account Number</string>
+    <string name="sort_code_hint">Sort Code / Routing Number</string>
+    <string name="iban_swift_hint">IBAN / SWIFT</string>
+    <string name="reference_hint">Payment Reference</string>
+    <string name="item_desc_header">Item Description</string>
+    <string name="qty_hours_header">Hours / Qty</string>
+    <string name="rate_header">Rate</string>
+    <string name="total_header">Total</string>
+    <string name="cd_remove_item">Remove Item</string>
+
+    <!-- Main Activity Strings -->
+    <string name="main_default_greeting">--</string>
+    <string name="main_loading_jobs">Loading active work orders...</string>
 </resources>

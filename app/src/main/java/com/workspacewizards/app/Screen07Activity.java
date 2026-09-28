@@ -14,13 +14,15 @@ public class Screen07Activity extends AppCompatActivity {
         setContentView(R.layout.activity_screen07);
 
         ImageButton btnBack = findViewById(R.id.btnBack);
-        Button btnNextPreview = findViewById(R.id.btnNextPreview);
         Button btnGenerateInvoice = findViewById(R.id.btnGenerateInvoice);
 
-        btnBack.setOnClickListener(v -> finish());
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
+        }
 
-        btnNextPreview.setOnClickListener(v -> launchInvoiceScreen());
-        btnGenerateInvoice.setOnClickListener(v -> launchInvoiceScreen());
+        if (btnGenerateInvoice != null) {
+            btnGenerateInvoice.setOnClickListener(v -> launchInvoiceScreen());
+        }
     }
 
     private void launchInvoiceScreen() {

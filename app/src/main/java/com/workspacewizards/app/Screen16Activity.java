@@ -14,19 +14,17 @@ public class Screen16Activity extends AppCompatActivity {
         setContentView(R.layout.activity_screen16);
 
         ImageButton btnBack = findViewById(R.id.btnBack);
-        Button btnNextPreview = findViewById(R.id.btnNextPreview);
         Button btnVerifyAndEnable = findViewById(R.id.btnVerifyAndEnable);
 
-        btnBack.setOnClickListener(v -> finish());
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
+        }
 
-        btnNextPreview.setOnClickListener(v -> {
-            Intent intent = new Intent(Screen16Activity.this, Screen17Activity.class);
-            startActivity(intent);
-        });
-
-        btnVerifyAndEnable.setOnClickListener(v -> {
-            Intent intent = new Intent(Screen16Activity.this, MfaActivity.class);
-            startActivity(intent);
-        });
+        if (btnVerifyAndEnable != null) {
+            btnVerifyAndEnable.setOnClickListener(v -> {
+                Intent intent = new Intent(Screen16Activity.this, MfaActivity.class);
+                startActivity(intent);
+            });
+        }
     }
 }

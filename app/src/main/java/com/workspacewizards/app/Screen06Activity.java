@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Screen06Activity extends AppCompatActivity {
 
     private ImageButton btnBack;
-    private Button btnNextPreview;
     private ImageView ivPhotoPreview, ivSignaturePad;
     private Button btnCapturePhoto, btnClearSignature, btnCompleteJob;
     private EditText etCompletionNotes;
@@ -24,7 +23,6 @@ public class Screen06Activity extends AppCompatActivity {
 
         // Binding views
         btnBack = findViewById(R.id.btnBack);
-        btnNextPreview = findViewById(R.id.btnNextPreview);
         ivPhotoPreview = findViewById(R.id.ivPhotoPreview);
         ivSignaturePad = findViewById(R.id.ivSignaturePad);
         btnCapturePhoto = findViewById(R.id.btnCapturePhoto);
@@ -32,28 +30,33 @@ public class Screen06Activity extends AppCompatActivity {
         btnCompleteJob = findViewById(R.id.btnCompleteJob);
         etCompletionNotes = findViewById(R.id.etCompletionNotes);
 
-        btnBack.setOnClickListener(v -> finish());
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
+        }
 
-        // Prototype flow navigation
-        btnNextPreview.setOnClickListener(v -> {
-            Intent intent = new Intent(Screen06Activity.this, Screen07Activity.class);
-            startActivity(intent);
-        });
+        if (btnCompleteJob != null) {
+            btnCompleteJob.setOnClickListener(v -> {
+                if (validateExecution()) {
+                    Toast.makeText(this, "Job Completed & Sent for Invoicing", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Screen06Activity.this, Screen07Activity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
 
-        btnCompleteJob.setOnClickListener(v -> {
-            if (validateExecution()) {
-                Toast.makeText(this, "Job Completed & Sent for Invoicing", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Screen06Activity.this, Screen07Activity.class);
-                startActivity(intent);
-            }
-        });
+        if (btnCapturePhoto != null) {
+            btnCapturePhoto.setOnClickListener(v -> Toast.makeText(this, "Launching Camera...", Toast.LENGTH_SHORT).show());
+        }
 
-        btnCapturePhoto.setOnClickListener(v -> Toast.makeText(this, "Launching Camera...", Toast.LENGTH_SHORT).show());
-
-        btnClearSignature.setOnClickListener(v -> {
-            ivSignaturePad.setImageDrawable(null);
-            Toast.makeText(this, "Signature Cleared", Toast.LENGTH_SHORT).show();
-        });
+        if (btnClearSignature != null) {
+            btnClearSignature.setOnClickListener(v -> {
+                if (ivSignaturePad != null) {
+                    ivSignaturePad.setImageDrawable(null);
+                }
+                Toast.makeText(this, "Signature Cleared", Toast.LENGTH_SHORT).show();
+            });
+        }
     }
 
     private boolean validateExecution() {

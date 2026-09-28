@@ -7,7 +7,6 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +39,6 @@ public class Screen09Activity extends AppCompatActivity {
     private FirebaseFirestore db;
 
     private ImageButton btnBack;
-    private Button btnNextPreview;
     private MaterialButton btnPayWithPayFast;
     private TextView tvPaymentAmountZar;
     private View layoutPaymentDetails;
@@ -58,7 +56,6 @@ public class Screen09Activity extends AppCompatActivity {
 
         // Bind Views
         btnBack = findViewById(R.id.btnBack);
-        btnNextPreview = findViewById(R.id.btnNextPreview);
         btnPayWithPayFast = findViewById(R.id.btnPayWithPayFast);
         tvPaymentAmountZar = findViewById(R.id.tvPaymentAmountZar);
         layoutPaymentDetails = findViewById(R.id.layoutPaymentDetails);
@@ -83,10 +80,6 @@ public class Screen09Activity extends AppCompatActivity {
         // Setup Listeners
         if (btnBack != null) {
             btnBack.setOnClickListener(v -> handleBackNavigation());
-        }
-
-        if (btnNextPreview != null) {
-            btnNextPreview.setOnClickListener(v -> launchSuccessScreen());
         }
 
         if (btnPayWithPayFast != null) {
@@ -202,10 +195,10 @@ public class Screen09Activity extends AppCompatActivity {
 
     private void updateWorkOrderStatusAndFinish() {
         Map<String, Object> workOrderUpdate = new HashMap<>();
-        workOrderUpdate.put("status", "Paid");
+        workOrderUpdate.put("status", "COMPLETED");
         workOrderUpdate.put("updatedAt", FieldValue.serverTimestamp());
 
-        db.collection("work_orders")
+        db.collection("workOrders")
                 .document(workOrderId)
                 .set(workOrderUpdate, SetOptions.merge())
                 .addOnCompleteListener(task -> {

@@ -1,6 +1,5 @@
 package com.workspacewizards.app;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -15,16 +14,14 @@ public class Screen12Activity extends AppCompatActivity {
         setContentView(R.layout.activity_screen12);
 
         ImageButton btnBack = findViewById(R.id.btnBack);
-        Button btnNextPreview = findViewById(R.id.btnNextPreview);
         Button btnAddContact = findViewById(R.id.btnAddContact);
 
-        btnBack.setOnClickListener(v -> finish());
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
+        }
 
-        btnNextPreview.setOnClickListener(v -> {
-            Intent intent = new Intent(Screen12Activity.this, Screen13Activity.class);
-            startActivity(intent);
-        });
-
-        btnAddContact.setOnClickListener(v -> Toast.makeText(this, "Placeholder: Add Contact flow", Toast.LENGTH_SHORT).show());
+        if (btnAddContact != null) {
+            btnAddContact.setOnClickListener(v -> Toast.makeText(this, "Placeholder: Add Contact flow", Toast.LENGTH_SHORT).show());
+        }
     }
 }
